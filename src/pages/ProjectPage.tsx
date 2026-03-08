@@ -4,9 +4,9 @@ import { ArrowLeft, ExternalLink } from "lucide-react";
 import { projects } from "@/data/projects";
 import Navbar from "@/components/Navbar";
 import FooterSection from "@/components/FooterSection";
-import projectRobot from "@/assets/project-robot.jpg";
-import projectClinic from "@/assets/project-clinic.jpg";
-import projectJdmatch from "@/assets/project-jdmatch.jpg";
+import projectRobot from "@/assets/project-robot-real.png";
+import projectClinic from "@/assets/project-clinic-real.jpg";
+import projectJdmatch from "@/assets/project-jdmatch-real.png";
 
 const imageMap: Record<string, string> = {
   "humanoid-receptionist": projectRobot,
