@@ -1,19 +1,30 @@
 import { Github, Linkedin, Mail, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
 import heroBg from "@/assets/hero-bg.jpg";
+import ParticleGrid from "./ParticleGrid";
 
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background */}
+      {/* Background image */}
       <div className="absolute inset-0">
         <img
           src={heroBg}
           alt=""
-          className="w-full h-full object-cover opacity-30"
+          className="w-full h-full object-cover opacity-20"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/80 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/70 to-background" />
       </div>
+
+      {/* Interactive particle grid */}
+      <div className="absolute inset-0 z-[1]">
+        <ParticleGrid />
+      </div>
+
+      {/* Radial glow behind name */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full z-[1] opacity-20"
+        style={{ background: "radial-gradient(circle, hsl(190 100% 50% / 0.3) 0%, transparent 70%)" }}
+      />
 
       <div className="section-container relative z-10 py-32 text-center">
         <motion.div
