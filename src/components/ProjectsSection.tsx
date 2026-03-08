@@ -2,9 +2,9 @@ import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { projects } from "@/data/projects";
 import FadeIn from "./FadeIn";
-import projectRobot from "@/assets/project-robot.jpg";
-import projectClinic from "@/assets/project-clinic.jpg";
-import projectJdmatch from "@/assets/project-jdmatch.jpg";
+import projectRobot from "@/assets/project-robot-real.png";
+import projectClinic from "@/assets/project-clinic-real.jpg";
+import projectJdmatch from "@/assets/project-jdmatch-real.png";
 
 const imageMap: Record<string, string> = {
   "humanoid-receptionist": projectRobot,
