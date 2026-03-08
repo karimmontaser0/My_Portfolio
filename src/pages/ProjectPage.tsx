@@ -127,6 +127,22 @@ const ProjectPage = () => {
                 </div>
               </div>
             )}
+
+            {/* Clinic Automation Demo */}
+            {project.id === "clinic-automation" && (
+              <div className="max-w-4xl">
+                <h2 className="font-heading text-xl font-semibold mb-4">
+                  Demo <span className="gradient-text">Video</span>
+                </h2>
+                <video
+                  controls
+                  className="w-full rounded-xl border border-border bg-card"
+                  poster={imageMap[project.id]}
+                >
+                  <source src="/videos/Clinic-Bot.mp4" type="video/mp4" />
+                </video>
+              </div>
+            )}
           </motion.div>
         </div>
       </div>
