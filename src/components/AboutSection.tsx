@@ -35,7 +35,8 @@ const AboutSection = () => {
 
         <FadeIn delay={0.35}>
           <a
-            href="#"
+            href="/Kareem-Montaser-CV.pdf"
+            download
             className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-medium text-primary-foreground transition-all duration-200 hover:opacity-90"
             style={{ backgroundImage: "var(--gradient-primary)" }}
           >
