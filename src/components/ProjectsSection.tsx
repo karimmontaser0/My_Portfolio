@@ -1,7 +1,7 @@
-import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { projects } from "@/data/projects";
+import FadeIn from "./FadeIn";
 import projectRobot from "@/assets/project-robot.jpg";
 import projectClinic from "@/assets/project-clinic.jpg";
 import projectJdmatch from "@/assets/project-jdmatch.jpg";
@@ -16,30 +16,19 @@ const ProjectsSection = () => {
   return (
     <section id="projects" className="py-24 bg-secondary/30">
       <div className="section-container">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6 }}
-        >
+        <FadeIn>
           <h2 className="text-3xl sm:text-4xl font-bold font-heading mb-2">
             Featured <span className="gradient-text">Projects</span>
           </h2>
           <div className="w-16 h-1 rounded-full bg-primary mb-12" />
-        </motion.div>
+        </FadeIn>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, i) => (
-            <motion.div
-              key={project.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-            >
+            <FadeIn key={project.id} delay={i * 0.15} distance={50}>
               <Link
                 to={`/project/${project.id}`}
-                className="block bg-card border border-border rounded-xl overflow-hidden card-hover group"
+                className="block bg-card border border-border rounded-xl overflow-hidden card-hover group h-full"
               >
                 <div className="relative overflow-hidden aspect-video">
                   <img
@@ -71,7 +60,7 @@ const ProjectsSection = () => {
                   </span>
                 </div>
               </Link>
-            </motion.div>
+            </FadeIn>
           ))}
         </div>
       </div>

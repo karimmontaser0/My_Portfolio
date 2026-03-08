@@ -1,5 +1,5 @@
-import { motion } from "framer-motion";
 import { GraduationCap } from "lucide-react";
+import FadeIn from "./FadeIn";
 
 const education = [
   {
@@ -23,33 +23,23 @@ const EducationSection = () => {
   return (
     <section id="education" className="py-24 bg-secondary/30">
       <div className="section-container">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6 }}
-        >
+        <FadeIn>
           <h2 className="text-3xl sm:text-4xl font-bold font-heading mb-2">
             <span className="gradient-text">Education</span>
           </h2>
           <div className="w-16 h-1 rounded-full bg-primary mb-12" />
-        </motion.div>
+        </FadeIn>
 
         <div className="grid md:grid-cols-3 gap-6">
           {education.map((edu, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="bg-card border border-border rounded-xl p-6 card-hover"
-            >
-              <GraduationCap size={28} className="text-primary mb-4" />
-              <h3 className="font-heading font-semibold mb-1">{edu.degree}</h3>
-              <p className="text-primary text-sm font-medium mb-2">{edu.institution}</p>
-              <p className="text-xs text-muted-foreground">{edu.period}</p>
-            </motion.div>
+            <FadeIn key={i} delay={i * 0.15} distance={50}>
+              <div className="bg-card border border-border rounded-xl p-6 card-hover h-full">
+                <GraduationCap size={28} className="text-primary mb-4" />
+                <h3 className="font-heading font-semibold mb-1">{edu.degree}</h3>
+                <p className="text-primary text-sm font-medium mb-2">{edu.institution}</p>
+                <p className="text-xs text-muted-foreground">{edu.period}</p>
+              </div>
+            </FadeIn>
           ))}
         </div>
       </div>
