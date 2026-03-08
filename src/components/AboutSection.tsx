@@ -8,6 +8,29 @@ const skills = [
 ];
 
 const AboutSection = () => {
+  const handleDownloadCV = async () => {
+    const pdfPath = "/Kareem-Montaser-CV.pdf";
+
+    try {
+      const response = await fetch(pdfPath);
+      if (!response.ok) throw new Error("Failed to fetch CV");
+
+      const blob = await response.blob();
+      const blobUrl = window.URL.createObjectURL(blob);
+      const link = document.createElement("a");
+
+      link.href = blobUrl;
+      link.download = "Kareem-Montaser-CV.pdf";
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+
+      window.URL.revokeObjectURL(blobUrl);
+    } catch {
+      window.open(pdfPath, "_blank", "noopener,noreferrer");
+    }
+  };
+
   return (
     <section id="about" className="py-24">
       <div className="section-container">
@@ -34,16 +57,15 @@ const AboutSection = () => {
         </FadeIn>
 
         <FadeIn delay={0.35}>
-          <a
-            href="/Kareem-Montaser-CV.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            type="button"
+            onClick={handleDownloadCV}
             className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-medium text-primary-foreground transition-all duration-200 hover:opacity-90"
             style={{ backgroundImage: "var(--gradient-primary)" }}
           >
             <Download size={18} />
             Download CV
-          </a>
+          </button>
         </FadeIn>
       </div>
     </section>
