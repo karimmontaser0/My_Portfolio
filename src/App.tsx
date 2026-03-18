@@ -15,7 +15,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       {/* 🚀 ADDED THE BASENAME HERE */}
-      <BrowserRouter basename="/kareem-montase/">
+      <BrowserRouter basename="/My_Portfolio/">
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/project/:id" element={<ProjectPage />} />
