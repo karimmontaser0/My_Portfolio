@@ -6,7 +6,7 @@ import { componentTagger } from "lovable-tagger";
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
   // ADDED: This tells GitHub Pages where to find your assets
-  base: "/kareem-montase/",
+  base: "/My_Portfolio/",
   
   server: {
     host: "::",
