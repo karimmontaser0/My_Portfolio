@@ -5,14 +5,12 @@ import FadeIn from "./FadeIn";
 import projectRobot from "@/assets/project-robot-real.png";
 import projectClinic from "@/assets/project-clinic-real.jpg";
 import projectJdmatch from "@/assets/project-jdmatch-real.png";
-// ✅ 1. ضفنا استدعاء الصورة هنا (خليها .jpeg زي ما صلحناها)
 import projectSiemens from "@/assets/Siemens-AI-Maintenance-Assistant.jpeg";
 
 const imageMap: Record<string, string> = {
   "humanoid-receptionist": projectRobot,
   "clinic-automation": projectClinic,
   "jd-match": projectJdmatch,
-  // ✅ 2. ضفنا المشروع الجديد في القاموس
   "siemens-ai-advisor": projectSiemens,
 };
 
@@ -27,12 +25,12 @@ const ProjectsSection = () => {
           <div className="w-16 h-1 rounded-full bg-primary mb-12" />
         </FadeIn>
 
-        {/* ✅ الشبكة (Grid) هتتظبط أوتوماتيك لـ 4 كروت */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, i) => (
             <FadeIn key={project.id} delay={i * 0.15} distance={50}>
+              {/* ✅ التعديل السحري هنا: ضفنا /My_Portfolio/ للمسار */}
               <Link
-                to={`/project/${project.id}`}
+                to={`/My_Portfolio/project/${project.id}`}
                 className="block bg-card border border-border rounded-xl overflow-hidden card-hover group h-full"
               >
                 <div className="relative overflow-hidden aspect-video">
