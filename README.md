@@ -2,7 +2,7 @@
 
 > A dynamic, fully responsive personal portfolio showcasing my expertise as an AI & Automation Engineer. Built to highlight my work in Generative AI, RAG pipelines, intelligent automation, and computer vision.
 
-🌐 **Live Demo:** [https://karimmontaser0.github.io/My_Portfolio/](https://karimmontaser0.github.io/My_Portfolio/)
+🌐 **Live Demo:** [https://karimmontaser0.github.io/My_Portfolio/](https://karimmontaser0.github.io/My_Portfolio/project/siemens-ai-advisor)
 
 ---
 
