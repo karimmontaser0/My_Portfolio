@@ -28,9 +28,9 @@ const ProjectsSection = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, i) => (
             <FadeIn key={project.id} delay={i * 0.15} distance={50}>
-              {/* ✅ التعديل السحري هنا: ضفنا /My_Portfolio/ للمسار */}
+              {/* ✅ التعديل هنا: اللينك بقى بسيط ومباشر لأننا استخدمنا HashRouter */}
               <Link
-                to={`/My_Portfolio/project/${project.id}`}
+                to={`/project/${project.id}`}
                 className="block bg-card border border-border rounded-xl overflow-hidden card-hover group h-full"
               >
                 <div className="relative overflow-hidden aspect-video">
