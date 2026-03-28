@@ -1,28 +1,22 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kareem Montaser | Backend & Automation Engineer</title>
-    <meta name="description" content="Backend & Automation Engineer specializing in Generative AI, intelligent automation workflows, and computer vision systems." />
-    <meta name="author" content="Kareem Montaser" />
+    <meta charset="utf-8">
+    <title>Kareem Montaser | Portfolio</title>
+    <script type="text/javascript">
+      // 💡 السكريبت ده بياخد اللينك اللي عمل 404 وبيبعته كـ "Parameter" للصفحة الرئيسية
+      var pathSegmentsToKeep = 1; // اسم الـ Repo بتاعك: My_Portfolio
 
-    <meta property="og:title" content="Kareem Montaser | Backend & Automation Engineer" />
-    <meta property="og:description" content="Backend & Automation Engineer specializing in Generative AI, intelligent automation workflows, and computer vision systems." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://karimmontaser0.github.io/My_Portfolio/" />
-    <meta property="og:image" content="https://karimmontaser0.github.io/My_Portfolio/portfolio-website.jpeg" />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Kareem Montaser | Backend & Automation Engineer" />
-    <meta name="twitter:description" content="Backend & Automation Engineer specializing in Generative AI, intelligent automation workflows, and computer vision systems." />
-    <meta name="twitter:image" content="https://karimmontaser0.github.io/My_Portfolio/portfolio-website.jpeg" />
-
-    <script type="module" crossorigin src="/My_Portfolio/src/main.tsx"></script>
+      var l = window.location;
+      l.replace(
+        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+        l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?p=/' +
+        l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
+        (l.search ? '&q=' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+        l.hash
+      );
+    </script>
   </head>
-
   <body>
-    <div id="root"></div>
-    <script type="module" src="/My_Portfolio/src/main.tsx"></script>
   </body>
 </html>
